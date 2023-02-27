@@ -24,6 +24,13 @@ export const Container = styled.div`
     flex: 1;
   }
 
+  button{
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+
+    cursor: pointer;
+
 
 
 

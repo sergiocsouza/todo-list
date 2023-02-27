@@ -21,6 +21,13 @@ export const AddArea = ({ onEnter }: Props) => {
         }
     }
 
+    const handleAddClick = () => {
+        if (inputText !== '') {
+          onEnter(inputText);
+          setInputText('');
+        }
+      }
+
     return (
         <C.Container>
             <div className="image">➕</div>
@@ -31,6 +38,9 @@ export const AddArea = ({ onEnter }: Props) => {
                 onChange={e=>setInputText(e.target.value)}
                 onKeyUp={handleKeyUp}
             />
+
+            <button onClick={handleAddClick}>Enviar</button>
+    
         </C.Container>
     );
 }
