@@ -30,6 +30,11 @@ const App = () => {
     }
     setList(newList);
   }
+
+  const handleRemoveTask = (id: number) => {
+    const newList = list.filter((item) => item.id !== id);
+    setList(newList);
+  };
   
 
   return (
@@ -44,6 +49,8 @@ const App = () => {
               key={index}
               item={item}
               onChange={handleTaskChange}
+              onRemove={handleRemoveTask}
+
             />
           ))}
 
